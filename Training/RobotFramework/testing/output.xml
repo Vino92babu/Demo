@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.11.4 on win32)" generated="2024-12-16T13:41:19.062783" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\VS_Code\Training\RobotFramework\testing\test.robot">
+<test id="s1-t1" name="Verify that a string can be written and read from a Simple Iframe" line="22">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-16T13:41:19.385647" level="INFO">Opening browser 'Chrome' to base url 'https://the-internet.herokuapp.com/iframe'.</msg>
+<msg time="2024-12-16T13:41:19.769220" level="WARN">The chromedriver version (130.0.6723.58) detected in PATH at C:\Python\Scripts\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.140); currently, chromedriver 131.0.6778.108 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>https://the-internet.herokuapp.com/iframe</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-16T13:41:19.384647" elapsed="6.642881"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:[role="menubar"]</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-16T13:41:26.030656" elapsed="0.098725"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-12-16T13:41:26.131764" level="INFO">Selecting frame 'id:mce_0_ifr'.</msg>
+<arg>id:mce_0_ifr</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-12-16T13:41:26.130512" elapsed="0.111624"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-16T13:41:26.242136" level="INFO">Clicking element 'id:tinymce'.</msg>
+<msg time="2024-12-16T13:41:27.608041" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-12-16T13:41:27.609561" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;iframe id="mce_0_ifr" frameborder="0" allowtransparency="true" title="Rich Text Area" class="tox-edit-area__iframe" cd_frame_id_="5c5ddcda344f25c85a145112416e4217"&gt;&lt;/iframe&gt; is not clickable at point (494, 194). Other element would receive the click: &lt;span style="display: block"&gt;...&lt;/span&gt;
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6673CE1F5+2972373]
+	(No symbol) [0x00007FF6670655F0]
+	(No symbol) [0x00007FF666F057FA]
+	(No symbol) [0x00007FF666F5D6CE]
+	(No symbol) [0x00007FF666F5B16C]
+	(No symbol) [0x00007FF666F58F7E]
+	(No symbol) [0x00007FF666F5783C]
+	(No symbol) [0x00007FF666F4992E]
+	(No symbol) [0x00007FF666F7BA7A]
+	(No symbol) [0x00007FF666F49266]
+	(No symbol) [0x00007FF666F7BC90]
+	(No symbol) [0x00007FF666F9B8CC]
+	(No symbol) [0x00007FF666F7B823]
+	(No symbol) [0x00007FF666F475E8]
+	(No symbol) [0x00007FF666F48751]
+	GetHandleVerifier [0x00007FF6673F47BD+3129501]
+	GetHandleVerifier [0x00007FF667444D00+3458528]
+	GetHandleVerifier [0x00007FF66743B05D+3418429]
+	GetHandleVerifier [0x00007FF6671C687B+844123]
+	(No symbol) [0x00007FF667070AFF]
+	(No symbol) [0x00007FF66706C6D4]
+	(No symbol) [0x00007FF66706C86D]
+	(No symbol) [0x00007FF66705BD79]
+	BaseThreadInitThunk [0x00007FFF59FC259D+29]
+	RtlUserThreadStart [0x00007FFF5A80AF38+40]
+</msg>
+<arg>id:tinymce</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-12-16T13:41:26.242136" elapsed="1.372513">ElementClickInterceptedException: Message: element click intercepted: Element &lt;iframe id="mce_0_ifr" frameborder="0" allowtransparency="true" title="Rich Text Area" class="tox-edit-area__iframe" cd_frame_id_="5c5ddcda344f25c85a145112416e4217"&gt;&lt;/iframe&gt; is not clickable at point (494, 194). Other element would receive the click: &lt;span style="display: block"&gt;...&lt;/span&gt;
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6673CE1F5+2972373]
+	(No symbol) [0x00007FF6670655F0]
+	(No symbol) [0x00007FF666F057FA]
+	(No symbol) [0x00007FF666F5D6CE]
+	(No symbol) [0x00007FF666F5B16C]
+	(No symbol) [0x00007FF666F58F7E]
+	(No symbol) [0x00007FF666F5783C]
+	(No symbol) [0x00007FF666F4992E]
+	(No symbol) [0x00007FF666F7BA7A]
+	(No symbol) [0x00007FF666F49266]
+	(No symbol) [0x00007FF666F7BC90]
+	(No symbol) [0x00007FF666F9B8CC]
+	(No symbol) [0x00007FF666F7B823]
+	(No symbol) [0x00007FF666F475E8]
+	(No symbol) [0x00007FF666F48751]
+	GetHandleVerifier [0x00007FF6673F47BD+3129501]
+	GetHandleVerifier [0x00007FF667444D00+3458528]
+	GetHandleVerifier [0x00007FF66743B05D+3418429]
+	GetHandleVerifier [0x00007FF6671C687B+844123]
+	(No symbol) [0x00007FF667070AFF]
+	(No symbol) [0x00007FF66706C6D4]
+	(No symbol) [0x00007FF66706C86D]
+	(No symbol) [0x00007FF66705BD79]
+	BaseThreadInitThunk [0x00007FFF59FC259D+29]
+	RtlUserThreadStart [0x00007FFF5A80AF38+40]
+</status>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id:tinymce</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-12-16T13:41:27.616150" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id:tinymce</arg>
+<arg>Input from Robot Framework Test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-12-16T13:41:27.616714" elapsed="0.000000"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<arg>id:tinymce</arg>
+<arg>Input from Robot Framework Test</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" start="2024-12-16T13:41:27.616714" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-12-16T13:41:27.616714" elapsed="0.000000"/>
+</kw>
+<doc>This test case verifies that a string can be written and read from an Iframe.</doc>
+<tag>Regression</tag>
+<status status="FAIL" start="2024-12-16T13:41:19.383647" elapsed="8.234134">ElementClickInterceptedException: Message: element click intercepted: Element &lt;iframe id="mce_0_ifr" frameborder="0" allowtransparency="true" title="Rich Text Area" class="tox-edit-area__iframe" cd_frame_id_="5c5ddcda344f25c85a145112416e4217"&gt;&lt;/iframe&gt; is not clickable at point (494, 194). Other element would receive the click: &lt;span style="display: block"&gt;...&lt;/span&gt;
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6673CE1F5+2972373]
+	(No symbol) [0x00007FF6670655F0]
+	(No symbol) [0x00007FF666F057FA]
+	(No symbol) [0x00007FF666F5D6CE]
+	(No symbol) [0x00007FF666F5B16C]
+	(No symbol) [0x00007FF666F58F7E]
+	(No symbol) [0x00007FF666F5783C]
+	(No symbol) [0x00007FF666F4992E]
+	(No symbol) [0x00007FF666F7BA7A]
+	(No symbol) [0x00007FF666F49266]
+	(No symbol) [0x00007FF666F7BC90]
+	(No symbol) [0x00007FF666F9B8CC]
+	(No symbol) [0x00007FF666F7B823]
+	(No symbol) [0x00007FF666F475E8]
+	(No symbol) [0x00007FF666F48751]
+	GetHandleVerifier [0x00007FF6673F47BD+3129501]
+	GetHandleVerifier [0x00007FF667444D00+3458528]
+	GetHandleVerifier [0x00007FF66743B05D+3418429]
+	GetHandleVerifier [0x00007FF6671C687B+844123]
+	(No symbol) [0x00007FF667070AFF]
+	(No symbol) [0x00007FF66706C6D4]
+	(No symbol) [0x00007FF66706C86D]
+	(No symbol) [0x00007FF66705BD79]
+	BaseThreadInitThunk [0x00007FFF59FC259D+29]
+	RtlUserThreadStart [0x00007FFF5A80AF38+40]
+</status>
+</test>
+<test id="s1-t2" name="Verify that the values can be read from inside a Nested Iframe" line="34">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-16T13:41:27.619831" level="INFO">Opening browser 'Chrome' to base url 'https://the-internet.herokuapp.com/nested_frames'.</msg>
+<msg time="2024-12-16T13:41:28.225847" level="WARN">The chromedriver version (130.0.6723.58) detected in PATH at C:\Python\Scripts\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.140); currently, chromedriver 131.0.6778.108 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>https://the-internet.herokuapp.com/nested_frames</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-16T13:41:27.619831" elapsed="3.500317"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:[frameborder="1"]</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-16T13:41:31.121159" elapsed="0.028281"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-12-16T13:41:31.149440" level="INFO">Selecting frame 'css:[src="/frame_top"]'.</msg>
+<arg>css:[src="/frame_top"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-12-16T13:41:31.149440" elapsed="0.040098"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-12-16T13:41:31.190547" level="INFO">Selecting frame 'css:[src="/frame_left"]'.</msg>
+<arg>css:[src="/frame_left"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-12-16T13:41:31.189538" elapsed="0.038451"/>
+</kw>
+<kw name="Current Frame Should Contain" owner="SeleniumLibrary">
+<msg time="2024-12-16T13:41:31.253617" level="INFO">Current frame contains text 'LEFT'.</msg>
+<arg>LEFT</arg>
+<doc>Verifies that the current frame contains ``text``.</doc>
+<status status="PASS" start="2024-12-16T13:41:31.229024" elapsed="0.025111"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2024-12-16T13:41:31.254135" elapsed="0.004549"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-12-16T13:41:31.259708" level="INFO">Selecting frame 'css:[src="/frame_top"]'.</msg>
+<arg>css:[src="/frame_top"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-12-16T13:41:31.259708" elapsed="0.063200"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-12-16T13:41:31.323937" level="INFO">Selecting frame 'css:[src="/frame_middle"]'.</msg>
+<arg>css:[src="/frame_middle"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-12-16T13:41:31.323937" elapsed="0.067011"/>
+</kw>
+<kw name="Current Frame Should Contain" owner="SeleniumLibrary">
+<msg time="2024-12-16T13:41:31.413636" level="INFO">Current frame contains text 'MIDDLE'.</msg>
+<arg>MIDDLE</arg>
+<doc>Verifies that the current frame contains ``text``.</doc>
+<status status="PASS" start="2024-12-16T13:41:31.390948" elapsed="0.022688"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2024-12-16T13:41:31.413636" elapsed="0.004024"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-12-16T13:41:31.417660" level="INFO">Selecting frame 'css:[src="/frame_top"]'.</msg>
+<arg>css:[src="/frame_top"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-12-16T13:41:31.417660" elapsed="0.059031"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-12-16T13:41:31.477696" level="INFO">Selecting frame 'css:[src="/frame_right"]'.</msg>
+<arg>css:[src="/frame_right"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-12-16T13:41:31.477696" elapsed="0.062825"/>
+</kw>
+<kw name="Current Frame Should Contain" owner="SeleniumLibrary">
+<msg time="2024-12-16T13:41:31.560842" level="INFO">Current frame contains text 'RIGHT'.</msg>
+<arg>RIGHT</arg>
+<doc>Verifies that the current frame contains ``text``.</doc>
+<status status="PASS" start="2024-12-16T13:41:31.541587" elapsed="0.019255"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2024-12-16T13:41:31.560842" elapsed="0.002994"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-12-16T13:41:31.564874" level="INFO">Selecting frame 'css:[src="/frame_bottom"]'.</msg>
+<arg>css:[src="/frame_bottom"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-12-16T13:41:31.564874" elapsed="0.042691"/>
+</kw>
+<kw name="Current Frame Should Contain" owner="SeleniumLibrary">
+<msg time="2024-12-16T13:41:31.623972" level="INFO">Current frame contains text 'BOTTOM'.</msg>
+<arg>BOTTOM</arg>
+<doc>Verifies that the current frame contains ``text``.</doc>
+<status status="PASS" start="2024-12-16T13:41:31.607565" elapsed="0.016407"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-16T13:41:31.624976" elapsed="2.082118"/>
+</kw>
+<doc>This test case verifies that the string can be read from a Nested Iframe.</doc>
+<tag>Regression</tag>
+<status status="PASS" start="2024-12-16T13:41:27.618741" elapsed="6.088353"/>
+</test>
+<doc>Iframes in Robot Framework</doc>
+<status status="FAIL" start="2024-12-16T13:41:19.064792" elapsed="14.644915"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="1" skip="0">Regression</stat>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-12-16T13:41:19.769220" level="WARN">The chromedriver version (130.0.6723.58) detected in PATH at C:\Python\Scripts\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.140); currently, chromedriver 131.0.6778.108 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-12-16T13:41:28.225847" level="WARN">The chromedriver version (130.0.6723.58) detected in PATH at C:\Python\Scripts\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.140); currently, chromedriver 131.0.6778.108 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.11.4 on win32)" generated="2024-12-31T15:01:17.781969" rpa="false" schemaversion="5">
+<suite id="s1" name="Database" source="c:\VS_Code\Training\Farhana\Robot_Framework\DBTest\database.robot">
+<kw name="Connect To Database" owner="DatabaseLibrary" type="SETUP">
+<msg time="2024-12-31T15:01:17.991133" level="INFO">Connecting using : pymysql.connect(db=demo_practice, user=root, passwd=***, host=127.0.0.1, port=3306, charset=None)</msg>
+<arg>pymysql</arg>
+<arg>${DBName}</arg>
+<arg>${DBuser}</arg>
+<arg>${DBpass}</arg>
+<arg>${DBhost}</arg>
+<arg>${DBport}</arg>
+<doc>Loads the DB API 2.0 module given ``dbapiModuleName`` then uses it to
+connect to the database using provided parameters such as ``dbName``, ``dbUsername``, and ``dbPassword``.</doc>
+<status status="PASS" start="2024-12-31T15:01:17.954884" elapsed="0.051946"/>
+</kw>
+<test id="s1-t1" name="Retriview Data from Table" line="53">
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2024-12-31T15:01:18.006830" level="INFO">Executing : Query  |  Select * from Dummy_Stud; </msg>
+<msg time="2024-12-31T15:01:18.006830" level="INFO">${QueryResult} = ()</msg>
+<var>${QueryResult}</var>
+<arg>Select * from Dummy_Stud;</arg>
+<doc>Runs a query with the ``selectStatement`` and returns the result as a list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2024-12-31T15:01:18.006830" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${QueryResult}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-31T15:01:18.006830" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-12-31T15:01:18.006830" elapsed="0.013969"/>
+</test>
+<kw name="Disconnect From Database" owner="DatabaseLibrary" type="TEARDOWN">
+<msg time="2024-12-31T15:01:18.022547" level="INFO">Executing : Disconnect From Database</msg>
+<doc>Disconnects from the database.</doc>
+<status status="PASS" start="2024-12-31T15:01:18.022547" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-12-31T15:01:17.791102" elapsed="0.231445"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Database">Database</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

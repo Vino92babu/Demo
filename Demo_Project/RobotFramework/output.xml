@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.11.4 on win32)" generated="2025-01-03T14:32:55.738263" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests." source="C:\VS_Code\Demo_Project\RobotFramework\tests.">
+<suite id="s1-s1" name="testDemo1" source="C:\VS_Code\Demo_Project\RobotFramework\tests.\testDemo1.robot">
+<test id="s1-s1-t1" name="Validate UnSuccesful Login" line="13">
+<kw name="open the browser with the Mortgage payment url">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:32:56.217981" level="INFO">Opening browser 'Chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<msg time="2025-01-03T14:32:57.154684" level="WARN">The chromedriver version (130.0.6723.58) detected in PATH at C:\Python\Scripts\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.205); currently, chromedriver 131.0.6778.204 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-03T14:32:56.217981" elapsed="2.956674"/>
+</kw>
+<status status="PASS" start="2025-01-03T14:32:56.202357" elapsed="2.972298"/>
+</kw>
+<kw name="Fill the login Form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:32:59.176689" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>rahulshettyacademy</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T14:32:59.175664" elapsed="0.167073"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:32:59.342737" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2025-01-03T14:32:59.387691" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>12345678</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T14:32:59.342737" elapsed="0.097080"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:32:59.439817" level="INFO">Clicking button 'signInBtn'.</msg>
+<arg>signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T14:32:59.439817" elapsed="0.075658"/>
+</kw>
+<status status="PASS" start="2025-01-03T14:32:59.174655" elapsed="0.340820"/>
+</kw>
+<kw name="wait until it checks and display error message">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Error_Message_Login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-03T14:32:59.516475" elapsed="2.215847"/>
+</kw>
+<status status="PASS" start="2025-01-03T14:32:59.515475" elapsed="2.216847"/>
+</kw>
+<kw name="verify error message is correct">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:01.750520" level="INFO">${result} = Incorrect username/password.</msg>
+<var>${result}</var>
+<arg>${Error_Message_Login}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T14:33:01.733451" elapsed="0.017069"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Incorrect username/password.</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-01-03T14:33:01.750520" elapsed="0.000000"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:01.750520" level="INFO">Verifying element 'css:.alert-danger' contains exact text 'Incorrect username/password.'.</msg>
+<arg>${Error_Message_Login}</arg>
+<arg>Incorrect username/password.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-01-03T14:33:01.750520" elapsed="0.031808"/>
+</kw>
+<status status="PASS" start="2025-01-03T14:33:01.733323" elapsed="0.049005"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-03T14:33:01.783350" elapsed="2.108664"/>
+</kw>
+<status status="PASS" start="2025-01-03T14:32:56.202357" elapsed="7.689657"/>
+</test>
+<doc>To validate the Login form</doc>
+<status status="PASS" start="2025-01-03T14:32:55.778587" elapsed="8.113427"/>
+</suite>
+<suite id="s1-s2" name="testDemo2" source="C:\VS_Code\Demo_Project\RobotFramework\tests.\testDemo2.robot">
+<test id="s1-s2-t1" name="Validate UnSuccesful Login" line="16">
+<kw name="open the browser with the Mortgage payment url" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:03.938831" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-01-03T14:33:03.938831" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-01-03T14:33:03.954425" level="FAIL">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</msg>
+<arg>Chrome</arg>
+<arg>executable_path=/Users/rahulshetty/Documents/chromedriver</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2025-01-03T14:33:03.938831" elapsed="0.078089">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-01-03T14:33:04.016920" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:03.938831" elapsed="0.078089">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Close Browser session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-03T14:33:04.016920" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-01-03T14:33:04.016920" elapsed="0.000000"/>
+</kw>
+<tag>SMOKE</tag>
+<status status="FAIL" start="2025-01-03T14:33:03.938831" elapsed="0.078089">Setup failed:
+TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</test>
+<test id="s1-s2-t2" name="Validate Cards display in the Shopping Page" line="22">
+<kw name="open the browser with the Mortgage payment url" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:04.016920" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-01-03T14:33:04.016920" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-01-03T14:33:04.016920" level="FAIL">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</msg>
+<arg>Chrome</arg>
+<arg>executable_path=/Users/rahulshetty/Documents/chromedriver</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2025-01-03T14:33:04.016920" elapsed="0.000000">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-01-03T14:33:04.016920" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:04.016920" elapsed="0.000000">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Close Browser session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-03T14:33:04.016920" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-01-03T14:33:04.016920" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:04.016920" elapsed="0.000000">Setup failed:
+TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</test>
+<test id="s1-s2-t3" name="Select the Form and navigate to Child window" line="29">
+<kw name="open the browser with the Mortgage payment url" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:04.016920" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-01-03T14:33:04.016920" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-01-03T14:33:04.016920" level="FAIL">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</msg>
+<arg>Chrome</arg>
+<arg>executable_path=/Users/rahulshetty/Documents/chromedriver</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2025-01-03T14:33:04.016920" elapsed="0.000000">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-01-03T14:33:04.016920" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:04.016920" elapsed="0.000000">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Close Browser session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-03T14:33:04.016920" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-01-03T14:33:04.016920" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:04.016920" elapsed="0.000000">Setup failed:
+TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</test>
+<doc>To validate the Login form</doc>
+<status status="FAIL" start="2025-01-03T14:33:03.892014" elapsed="0.124906"/>
+</suite>
+<suite id="s1-s3" name="testDemo3" source="C:\VS_Code\Demo_Project\RobotFramework\tests.\testDemo3.robot">
+<test id="s1-s3-t1" name="Validate Child window Functionality" line="17">
+<kw name="open the browser with the Mortgage payment url" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:04.032570" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-01-03T14:33:04.032570" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-01-03T14:33:04.032570" level="FAIL">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</msg>
+<arg>Chrome</arg>
+<arg>executable_path=/Users/rahulshetty/Documents/chromedriver</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2025-01-03T14:33:04.032570" elapsed="0.000000">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-01-03T14:33:04.032570" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:04.032570" elapsed="0.000000">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-03T14:33:04.032570" elapsed="0.000000"/>
+</kw>
+<tag>NEWFEATURE</tag>
+<status status="FAIL" start="2025-01-03T14:33:04.032570" elapsed="0.000000">Setup failed:
+TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</test>
+<doc>To validate the Login form</doc>
+<status status="FAIL" start="2025-01-03T14:33:04.016920" elapsed="0.015650"/>
+</suite>
+<suite id="s1-s4" name="testDemo4" source="C:\VS_Code\Demo_Project\RobotFramework\tests.\testDemo4.robot">
+<test id="s1-s4-t1" name="Invalid username" line="14">
+<kw name="Validate UnSuccesful Login">
+<kw name="open the browser with the Mortgage payment url">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:04.032570" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-01-03T14:33:04.032570" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-01-03T14:33:04.032570" level="FAIL">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</msg>
+<arg>Chrome</arg>
+<arg>executable_path=/Users/rahulshetty/Documents/chromedriver</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2025-01-03T14:33:04.032570" elapsed="0.000000">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>https://rahulshettyacademy.com/loginpagePractise/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-01-03T14:33:04.032570" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:04.032570" elapsed="0.000000">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Fill the login Form">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="NOT RUN" start="2025-01-03T14:33:04.048169" elapsed="0.000000"/>
+</kw>
+<kw name="wait until it checks and display error message">
+<status status="NOT RUN" start="2025-01-03T14:33:04.048169" elapsed="0.000000"/>
+</kw>
+<kw name="verify error message is correct">
+<status status="NOT RUN" start="2025-01-03T14:33:04.048169" elapsed="0.000000"/>
+</kw>
+<arg>dsahed</arg>
+<arg>learning</arg>
+<status status="FAIL" start="2025-01-03T14:33:04.032570" elapsed="0.015599">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-03T14:33:04.048169" elapsed="0.001671"/>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:04.032570" elapsed="0.017510">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</test>
+<test id="s1-s4-t2" name="Invalid password" line="15">
+<kw name="Validate UnSuccesful Login">
+<kw name="open the browser with the Mortgage payment url">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:04.051125" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-01-03T14:33:04.051125" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-01-03T14:33:04.051125" level="FAIL">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</msg>
+<arg>Chrome</arg>
+<arg>executable_path=/Users/rahulshetty/Documents/chromedriver</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2025-01-03T14:33:04.051125" elapsed="0.001037">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>https://rahulshettyacademy.com/loginpagePractise/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-01-03T14:33:04.052162" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:04.051125" elapsed="0.001037">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Fill the login Form">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="NOT RUN" start="2025-01-03T14:33:04.052162" elapsed="0.000000"/>
+</kw>
+<kw name="wait until it checks and display error message">
+<status status="NOT RUN" start="2025-01-03T14:33:04.053125" elapsed="0.000000"/>
+</kw>
+<kw name="verify error message is correct">
+<status status="NOT RUN" start="2025-01-03T14:33:04.053125" elapsed="0.000000"/>
+</kw>
+<arg>rahulshetty</arg>
+<arg>ploudfg</arg>
+<status status="FAIL" start="2025-01-03T14:33:04.050080" elapsed="0.003045">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-03T14:33:04.053125" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:04.050080" elapsed="0.003045">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</test>
+<test id="s1-s4-t3" name="special characters" line="16">
+<kw name="Validate UnSuccesful Login">
+<kw name="open the browser with the Mortgage payment url">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:04.054162" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-01-03T14:33:04.054162" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-01-03T14:33:04.054162" level="FAIL">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</msg>
+<arg>Chrome</arg>
+<arg>executable_path=/Users/rahulshetty/Documents/chromedriver</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2025-01-03T14:33:04.054162" elapsed="0.000997">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>https://rahulshettyacademy.com/loginpagePractise/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-01-03T14:33:04.056108" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:04.054162" elapsed="0.001946">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Fill the login Form">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="NOT RUN" start="2025-01-03T14:33:04.056108" elapsed="0.000000"/>
+</kw>
+<kw name="wait until it checks and display error message">
+<status status="NOT RUN" start="2025-01-03T14:33:04.056108" elapsed="0.000000"/>
+</kw>
+<kw name="verify error message is correct">
+<status status="NOT RUN" start="2025-01-03T14:33:04.056108" elapsed="0.000000"/>
+</kw>
+<arg>@#$</arg>
+<arg>learning</arg>
+<status status="FAIL" start="2025-01-03T14:33:04.054162" elapsed="0.002962">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-03T14:33:04.057124" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:04.053125" elapsed="0.003999">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</test>
+<doc>To validate the Login form</doc>
+<status status="FAIL" start="2025-01-03T14:33:04.032570" elapsed="0.024554"/>
+</suite>
+<suite id="s1-s5" name="testDemo5" source="C:\VS_Code\Demo_Project\RobotFramework\tests.\testDemo5.robot">
+<test id="s1-s5-t1" name="Invalid username" line="12">
+<kw name="Validate UnSuccesful Login">
+<kw name="open the browser with the Mortgage payment url">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:04.110956" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-01-03T14:33:04.110956" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-01-03T14:33:04.110956" level="FAIL">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</msg>
+<arg>Chrome</arg>
+<arg>executable_path=/Users/rahulshetty/Documents/chromedriver</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2025-01-03T14:33:04.110956" elapsed="0.000998">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>https://rahulshettyacademy.com/loginpagePractise/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-01-03T14:33:04.111954" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:04.110956" elapsed="0.000998">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Fill the login Form">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="NOT RUN" start="2025-01-03T14:33:04.111954" elapsed="0.000000"/>
+</kw>
+<kw name="wait until it checks and display error message">
+<status status="NOT RUN" start="2025-01-03T14:33:04.111954" elapsed="0.000000"/>
+</kw>
+<kw name="verify error message is correct">
+<status status="NOT RUN" start="2025-01-03T14:33:04.111954" elapsed="0.000000"/>
+</kw>
+<arg>username=dsahed</arg>
+<arg>password=learning</arg>
+<status status="FAIL" start="2025-01-03T14:33:04.109928" elapsed="0.002026">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-03T14:33:04.112962" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:04.108955" elapsed="0.004007">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</test>
+<test id="s1-s5-t2" name="Invalid password" line="12">
+<kw name="Validate UnSuccesful Login">
+<kw name="open the browser with the Mortgage payment url">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:04.116546" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-01-03T14:33:04.116546" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-01-03T14:33:04.117591" level="FAIL">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</msg>
+<arg>Chrome</arg>
+<arg>executable_path=/Users/rahulshetty/Documents/chromedriver</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2025-01-03T14:33:04.116546" elapsed="0.001045">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>https://rahulshettyacademy.com/loginpagePractise/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-01-03T14:33:04.117591" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:04.115512" elapsed="0.002079">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Fill the login Form">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="NOT RUN" start="2025-01-03T14:33:04.118592" elapsed="0.000000"/>
+</kw>
+<kw name="wait until it checks and display error message">
+<status status="NOT RUN" start="2025-01-03T14:33:04.118592" elapsed="0.000000"/>
+</kw>
+<kw name="verify error message is correct">
+<status status="NOT RUN" start="2025-01-03T14:33:04.118592" elapsed="0.000000"/>
+</kw>
+<arg>username=rahulshetty</arg>
+<arg>password=ploudfg</arg>
+<status status="FAIL" start="2025-01-03T14:33:04.114710" elapsed="0.003882">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-03T14:33:04.118592" elapsed="0.001013"/>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:04.112962" elapsed="0.006643">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</test>
+<test id="s1-s5-t3" name="special characters" line="12">
+<kw name="Validate UnSuccesful Login">
+<kw name="open the browser with the Mortgage payment url">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:04.122585" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-01-03T14:33:04.122585" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-01-03T14:33:04.122585" level="FAIL">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</msg>
+<arg>Chrome</arg>
+<arg>executable_path=/Users/rahulshetty/Documents/chromedriver</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2025-01-03T14:33:04.122585" elapsed="0.000996">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>https://rahulshettyacademy.com/loginpagePractise/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-01-03T14:33:04.123581" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:04.121580" elapsed="0.002001">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Fill the login Form">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="NOT RUN" start="2025-01-03T14:33:04.123581" elapsed="0.000000"/>
+</kw>
+<kw name="wait until it checks and display error message">
+<status status="NOT RUN" start="2025-01-03T14:33:04.123581" elapsed="0.000000"/>
+</kw>
+<kw name="verify error message is correct">
+<status status="NOT RUN" start="2025-01-03T14:33:04.123581" elapsed="0.000000"/>
+</kw>
+<arg>username=@#$</arg>
+<arg>password=learning</arg>
+<status status="FAIL" start="2025-01-03T14:33:04.120579" elapsed="0.004002">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-03T14:33:04.124581" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:04.119605" elapsed="0.004976">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</test>
+<test id="s1-s5-t4" name="Login with user 1234 and password  4242" line="12">
+<kw name="Validate UnSuccesful Login">
+<kw name="open the browser with the Mortgage payment url">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:04.126555" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-01-03T14:33:04.126555" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-01-03T14:33:04.126555" level="FAIL">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</msg>
+<arg>Chrome</arg>
+<arg>executable_path=/Users/rahulshetty/Documents/chromedriver</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2025-01-03T14:33:04.126555" elapsed="0.000000">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>https://rahulshettyacademy.com/loginpagePractise/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-01-03T14:33:04.127545" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:04.125545" elapsed="0.002000">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Fill the login Form">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="NOT RUN" start="2025-01-03T14:33:04.127545" elapsed="0.000000"/>
+</kw>
+<kw name="wait until it checks and display error message">
+<status status="NOT RUN" start="2025-01-03T14:33:04.127545" elapsed="0.000000"/>
+</kw>
+<kw name="verify error message is correct">
+<status status="NOT RUN" start="2025-01-03T14:33:04.127545" elapsed="0.000000"/>
+</kw>
+<arg>username=1234</arg>
+<arg>password= 4242</arg>
+<status status="FAIL" start="2025-01-03T14:33:04.125545" elapsed="0.002000">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-03T14:33:04.128585" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:04.124581" elapsed="0.004004">TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'</status>
+</test>
+<doc>To validate the Login form</doc>
+<status status="FAIL" start="2025-01-03T14:33:04.058118" elapsed="0.070467"/>
+</suite>
+<suite id="s1-s6" name="testDemo6" source="C:\VS_Code\Demo_Project\RobotFramework\tests.\testDemo6.robot">
+<test id="s1-s6-t1" name="Validate UnSuccesful Login" line="27">
+<kw name="open the browser with the url" owner="Generic" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:04.208630" level="INFO">Opening browser 'Chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<msg time="2025-01-03T14:33:04.558283" level="WARN">The chromedriver version (130.0.6723.58) detected in PATH at C:\Python\Scripts\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.205); currently, chromedriver 131.0.6778.204 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-03T14:33:04.208630" elapsed="1.814911"/>
+</kw>
+<status status="PASS" start="2025-01-03T14:33:04.207630" elapsed="1.815911"/>
+</kw>
+<kw name="Fill the login Form" owner="LandingPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:06.027136" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T14:33:06.026120" elapsed="0.136366"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:06.162486" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2025-01-03T14:33:06.204569" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T14:33:06.162486" elapsed="0.091003"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:06.253489" level="INFO">Clicking button 'signInBtn'.</msg>
+<arg>signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T14:33:06.253489" elapsed="0.077212"/>
+</kw>
+<arg>${user_name}</arg>
+<arg>${invalid_password}</arg>
+<status status="PASS" start="2025-01-03T14:33:06.025009" elapsed="0.305692"/>
+</kw>
+<kw name="wait until Element is located in the page" owner="LandingPage">
+<kw name="Wait Until element passed is located on Page" owner="Generic">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${page_locator}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-03T14:33:06.332567" elapsed="2.194864"/>
+</kw>
+<arg>${Error_Message_Login}</arg>
+<status status="PASS" start="2025-01-03T14:33:06.332567" elapsed="2.195865"/>
+</kw>
+<status status="PASS" start="2025-01-03T14:33:06.331557" elapsed="2.196875"/>
+</kw>
+<kw name="verify error message is correct" owner="LandingPage">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:08.563744" level="INFO">${result} = Incorrect username/password.</msg>
+<var>${result}</var>
+<arg>${Error_Message_Login}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T14:33:08.529431" elapsed="0.034313"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Incorrect username/password.</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-01-03T14:33:08.564747" elapsed="0.000000"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:08.565749" level="INFO">Verifying element 'css:.alert-danger' contains exact text 'Incorrect username/password.'.</msg>
+<arg>${Error_Message_Login}</arg>
+<arg>Incorrect username/password.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-01-03T14:33:08.565749" elapsed="0.025944"/>
+</kw>
+<status status="PASS" start="2025-01-03T14:33:08.528432" elapsed="0.063261"/>
+</kw>
+<kw name="Close Browser session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-03T14:33:08.592671" elapsed="2.104138"/>
+</kw>
+<status status="PASS" start="2025-01-03T14:33:08.591693" elapsed="2.106298"/>
+</kw>
+<tag>REGRESSION</tag>
+<tag>SMOKE</tag>
+<status status="PASS" start="2025-01-03T14:33:04.207630" elapsed="6.490882"/>
+</test>
+<test id="s1-s6-t2" name="End to end ecommerce Product validation" line="35">
+<kw name="open the browser with the url" owner="Generic" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:10.700391" level="INFO">Opening browser 'Chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<msg time="2025-01-03T14:33:11.044094" level="WARN">The chromedriver version (130.0.6723.58) detected in PATH at C:\Python\Scripts\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.205); currently, chromedriver 131.0.6778.204 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-03T14:33:10.700391" elapsed="1.788261"/>
+</kw>
+<status status="PASS" start="2025-01-03T14:33:10.700391" elapsed="1.788261"/>
+</kw>
+<kw name="Fill the login Form" owner="LandingPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:12.489675" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T14:33:12.488652" elapsed="0.134478"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:12.624170" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2025-01-03T14:33:12.670788" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T14:33:12.623130" elapsed="0.115708"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:12.739875" level="INFO">Clicking button 'signInBtn'.</msg>
+<arg>signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T14:33:12.738838" elapsed="0.087806"/>
+</kw>
+<arg>${user_name}</arg>
+<arg>${valid_password}</arg>
+<status status="PASS" start="2025-01-03T14:33:12.488652" elapsed="0.337992"/>
+</kw>
+<kw name="wait until Element is located in the page" owner="ShopPage">
+<kw name="Wait Until element passed is located on Page" owner="Generic">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${page_locator}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-03T14:33:12.828934" elapsed="3.065021"/>
+</kw>
+<arg>${Shop_page_load}</arg>
+<status status="PASS" start="2025-01-03T14:33:12.827927" elapsed="3.067222"/>
+</kw>
+<status status="PASS" start="2025-01-03T14:33:12.826644" elapsed="3.068505"/>
+</kw>
+<kw name="Verify Card titles in the Shop page" owner="ShopPage">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-01-03T14:33:15.896159" level="INFO">@{expectedList} = [ iphone X | Samsung Note 8 | Nokia Edge | Blackberry ]</msg>
+<var>@{expectedList}</var>
+<arg>iphone X</arg>
+<arg>Samsung Note 8</arg>
+<arg>Nokia Edge</arg>
+<arg>Blackberry</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-01-03T14:33:15.896159" elapsed="0.001005"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:15.908917" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="86e3863602fe38164eb44b57fdc58275", element="f.BA931644F09FCF98956277B49CCF3918.d.184704563F60DF05CCC963BCE0786FBF.e.50")&gt;, &lt;selenium.webdriv...</msg>
+<var>${elements}</var>
+<arg>css:.card-title</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-01-03T14:33:15.897164" elapsed="0.011753"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-01-03T14:33:15.909925" level="INFO">@{actualList} = [ ]</msg>
+<var>@{actualList}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-01-03T14:33:15.909925" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-03T14:33:15.934921" level="INFO">iphone X</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-03T14:33:15.910968" elapsed="0.023953"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actualList}</arg>
+<arg>${element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-01-03T14:33:15.935921" elapsed="0.012154"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="86e3863602fe38164eb44b57fdc58275", element="f.BA931644F09FCF98956277B49CCF3918.d.184704563F60DF05CCC963BCE0786FBF.e.50")&gt;</var>
+<status status="PASS" start="2025-01-03T14:33:15.909925" elapsed="0.039167"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-03T14:33:15.956944" level="INFO">Samsung Note 8</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-03T14:33:15.949092" elapsed="0.007852"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actualList}</arg>
+<arg>${element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-01-03T14:33:15.956944" elapsed="0.010891"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="86e3863602fe38164eb44b57fdc58275", element="f.BA931644F09FCF98956277B49CCF3918.d.184704563F60DF05CCC963BCE0786FBF.e.51")&gt;</var>
+<status status="PASS" start="2025-01-03T14:33:15.949092" elapsed="0.018743"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-03T14:33:15.978442" level="INFO">Nokia Edge</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-03T14:33:15.968861" elapsed="0.009581"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actualList}</arg>
+<arg>${element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-01-03T14:33:15.978442" elapsed="0.010011"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="86e3863602fe38164eb44b57fdc58275", element="f.BA931644F09FCF98956277B49CCF3918.d.184704563F60DF05CCC963BCE0786FBF.e.52")&gt;</var>
+<status status="PASS" start="2025-01-03T14:33:15.968861" elapsed="0.019592"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-03T14:33:15.999573" level="INFO">Blackberry</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-03T14:33:15.988453" elapsed="0.011120"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actualList}</arg>
+<arg>${element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-01-03T14:33:15.999573" elapsed="0.009143"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="86e3863602fe38164eb44b57fdc58275", element="f.BA931644F09FCF98956277B49CCF3918.d.184704563F60DF05CCC963BCE0786FBF.e.53")&gt;</var>
+<status status="PASS" start="2025-01-03T14:33:15.988453" elapsed="0.020263"/>
+</iter>
+<var>${element}</var>
+<value>@{elements}</value>
+<status status="PASS" start="2025-01-03T14:33:15.909925" elapsed="0.098791"/>
+</for>
+<kw name="Lists Should Be Equal" owner="Collections">
+<arg>${expectedList}</arg>
+<arg>${actualList}</arg>
+<doc>Fails if given lists are unequal.</doc>
+<status status="PASS" start="2025-01-03T14:33:16.008716" elapsed="0.001068"/>
+</kw>
+<status status="PASS" start="2025-01-03T14:33:15.896159" elapsed="0.113625"/>
+</kw>
+<kw name="Verify items in the Checkout Page and proceed" owner="CheckoutPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:16.010799" level="INFO">Clicking element 'css:.btn-success'.</msg>
+<msg time="2025-01-03T14:33:16.099225" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-03T14:33:16.099225" level="FAIL">Element with locator 'css:.btn-success' not found.</msg>
+<arg>css:.btn-success</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-01-03T14:33:16.010799" elapsed="0.138014">Element with locator 'css:.btn-success' not found.</status>
+</kw>
+<status status="FAIL" start="2025-01-03T14:33:16.009784" elapsed="0.139029">Element with locator 'css:.btn-success' not found.</status>
+</kw>
+<kw name="Enter the Country and select the terms" owner="ConfirmationPage">
+<arg>${country_name}</arg>
+<status status="NOT RUN" start="2025-01-03T14:33:16.148813" elapsed="0.000000"/>
+</kw>
+<kw name="Purchase the Product and Confirm the Purchase" owner="ConfirmationPage">
+<status status="NOT RUN" start="2025-01-03T14:33:16.149853" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-03T14:33:16.149853" elapsed="2.092709"/>
+</kw>
+<status status="PASS" start="2025-01-03T14:33:16.149853" elapsed="2.093255"/>
+</kw>
+<tag>REGRESSION</tag>
+<status status="FAIL" start="2025-01-03T14:33:10.699688" elapsed="7.543420">Element with locator 'css:.btn-success' not found.</status>
+</test>
+<test id="s1-s6-t3" name="Select the Form and navigate to Child window" line="47">
+<kw name="open the browser with the url" owner="Generic" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:18.243108" level="INFO">Opening browser 'Chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<msg time="2025-01-03T14:33:18.542802" level="WARN">The chromedriver version (130.0.6723.58) detected in PATH at C:\Python\Scripts\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.205); currently, chromedriver 131.0.6778.204 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-03T14:33:18.243108" elapsed="1.765959"/>
+</kw>
+<status status="PASS" start="2025-01-03T14:33:18.243108" elapsed="1.766966"/>
+</kw>
+<kw name="Fill the Login Details and Login Form" owner="LandingPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:20.012108" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>rahulshettyacademy</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T14:33:20.012108" elapsed="0.174153"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:20.186261" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2025-01-03T14:33:20.240062" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>learning</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T14:33:20.186261" elapsed="0.134362"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:20.320623" level="INFO">Clicking element 'css:input[value='user']'.</msg>
+<arg>css:input[value='user']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T14:33:20.320623" elapsed="0.091449"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.modal-body</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-03T14:33:20.413074" elapsed="0.256532"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:20.669606" level="INFO">Clicking button 'id:okayBtn'.</msg>
+<arg>id:okayBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T14:33:20.669606" elapsed="0.100037"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:20.770647" level="INFO">Clicking button 'id:okayBtn'.</msg>
+<arg>id:okayBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T14:33:20.769643" elapsed="0.086517"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>css:.modal-body</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-01-03T14:33:20.856160" elapsed="0.252989"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:21.110148" level="INFO">Selecting options from selection list 'css:select.form-control' by value teach.</msg>
+<arg>css:select.form-control</arg>
+<arg>teach</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-01-03T14:33:21.109149" elapsed="0.103852"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:21.214001" level="INFO">Selecting checkbox 'terms'.</msg>
+<arg>terms</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-03T14:33:21.213001" elapsed="0.078669"/>
+</kw>
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<msg time="2025-01-03T14:33:21.292673" level="INFO">Verifying checkbox 'terms' is selected.</msg>
+<arg>terms</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="PASS" start="2025-01-03T14:33:21.291670" elapsed="0.030545"/>
+</kw>
+<status status="PASS" start="2025-01-03T14:33:20.011076" elapsed="1.311139"/>
+</kw>
+<kw name="Close Browser session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-03T14:33:21.323225" elapsed="2.084515"/>
+</kw>
+<status status="PASS" start="2025-01-03T14:33:21.322215" elapsed="2.085525"/>
+</kw>
+<status status="PASS" start="2025-01-03T14:33:18.243108" elapsed="5.164632"/>
+</test>
+<doc>To validate the Login form</doc>
+<status status="FAIL" start="2025-01-03T14:33:04.129546" elapsed="19.278194"/>
+</suite>
+<suite id="s1-s7" name="testDemo7" source="C:\VS_Code\Demo_Project\RobotFramework\tests.\testDemo7.robot">
+<test id="s1-s7-t1" name="Play around with Dictinoary" line="11">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-01-03T14:33:23.524768" level="INFO">&amp;{data} = { name=rahulshetty | course=robot | website=rahulshettyacademy.com }</msg>
+<var>&amp;{data}</var>
+<arg>name=rahulshetty</arg>
+<arg>course=robot</arg>
+<arg>website=rahulshettyacademy.com</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.524768" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-03T14:33:23.524768" level="INFO">{'name': 'rahulshetty', 'course': 'robot', 'website': 'rahulshettyacademy.com'}</msg>
+<arg>${data}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.524768" elapsed="0.000000"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${data}</arg>
+<arg>name</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.524768" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-03T14:33:23.524768" level="INFO">rahulshetty</msg>
+<arg>${data}[name]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.524768" elapsed="0.000000"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-01-03T14:33:23.524768" level="INFO">${url} = rahulshettyacademy.com</msg>
+<var>${url}</var>
+<arg>${data}</arg>
+<arg>website</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.524768" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-03T14:33:23.524768" level="INFO">rahulshettyacademy.com</msg>
+<arg>${url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.524768" elapsed="0.000000"/>
+</kw>
+<tag>API</tag>
+<status status="PASS" start="2025-01-03T14:33:23.524768" elapsed="0.000000"/>
+</test>
+<test id="s1-s7-t2" name="Add Book into Library DataBase" line="21">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-01-03T14:33:23.524768" level="INFO">&amp;{req_body} = { name=RobotFramework | isbn=947303 | aisle=324534 | author=rahulshetty }</msg>
+<var>&amp;{req_body}</var>
+<arg>name=${book_name}</arg>
+<arg>isbn=947303</arg>
+<arg>aisle=324534</arg>
+<arg>author=rahulshetty</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.524768" elapsed="0.000000"/>
+</kw>
+<kw name="POST" owner="RequestsLibrary">
+<msg time="2025-01-03T14:33:23.691239" level="INFO">POST Request : url=https://rahulshettyacademy.com/Library/Addbook.php 
+ path_url=/Library/Addbook.php 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '88', 'Content-Type': 'application/json'} 
+ body=b'{"name": "RobotFramework", "isbn": "947303", "aisle": "324534", "author": "rahulshetty"}' 
+ </msg>
+<msg time="2025-01-03T14:33:23.691239" level="INFO">POST Response : url=https://rahulshettyacademy.com/Library/Addbook.php 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 03 Jan 2025 09:03:22 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With', 'Content-Length': '48', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'application/json;charset=UTF-8'} 
+ body={"Msg":"successfully added","ID":"947303324534"} 
+ </msg>
+<msg time="2025-01-03T14:33:23.691239" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${base_url}/Library/Addbook.php</arg>
+<arg>json=${req_body}</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a POST request.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.524768" elapsed="0.166471"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-03T14:33:23.691239" level="INFO">{'Msg': 'successfully added', 'ID': '947303324534'}</msg>
+<arg>${response.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.691239" elapsed="0.000000"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response.json()}</arg>
+<arg>ID</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.691239" elapsed="0.000000"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-01-03T14:33:23.691239" level="INFO">${book_id} = 947303324534</msg>
+<var>${book_id}</var>
+<arg>${response.json()}</arg>
+<arg>ID</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.691239" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-01-03T14:33:23.691239" level="INFO">${book_id} = 947303324534</msg>
+<arg>${book_id}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.691239" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-03T14:33:23.691239" level="INFO">947303324534</msg>
+<arg>${book_id}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.691239" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>successfully added</arg>
+<arg>${response.json()}[Msg]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.691239" elapsed="0.000000"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.691239" elapsed="0.000000"/>
+</kw>
+<tag>API</tag>
+<status status="PASS" start="2025-01-03T14:33:23.524768" elapsed="0.166471"/>
+</test>
+<test id="s1-s7-t3" name="Get the Book Details which got added" line="33">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2025-01-03T14:33:23.774409" level="INFO">GET Request : url=https://rahulshettyacademy.com/Library/GetBook.php?ID=947303324534 
+ path_url=/Library/GetBook.php?ID=947303324534 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-01-03T14:33:23.774409" level="INFO">GET Response : url=https://rahulshettyacademy.com/Library/GetBook.php?ID=947303324534 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 03 Jan 2025 09:03:22 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With', 'Content-Length': '88', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'application/json;charset=UTF-8'} 
+ body=[{"book_name":"RobotFramework","isbn":"947303","aisle":"324534","author":"rahulshetty"}] 
+ </msg>
+<msg time="2025-01-03T14:33:23.774409" level="INFO">${get_response} = &lt;Response [200]&gt;</msg>
+<var>${get_response}</var>
+<arg>${base_url}/Library/GetBook.php</arg>
+<arg>params=ID=${book_id}</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.691239" elapsed="0.083170"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-03T14:33:23.774409" level="INFO">[{'book_name': 'RobotFramework', 'isbn': '947303', 'aisle': '324534', 'author': 'rahulshetty'}]</msg>
+<arg>${get_response.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.774409" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${book_name}</arg>
+<arg>${get_response.json()}[0][book_name]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.774409" elapsed="0.000000"/>
+</kw>
+<tag>API</tag>
+<status status="PASS" start="2025-01-03T14:33:23.691239" elapsed="0.083170"/>
+</test>
+<test id="s1-s7-t4" name="Delete the Book from database" line="40">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-01-03T14:33:23.774409" level="INFO">&amp;{delete_req} = { ID=947303324534 }</msg>
+<var>&amp;{delete_req}</var>
+<arg>ID=${book_id}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.774409" elapsed="0.000000"/>
+</kw>
+<kw name="POST" owner="RequestsLibrary">
+<msg time="2025-01-03T14:33:23.875028" level="INFO">POST Request : url=https://rahulshettyacademy.com/Library/DeleteBook.php 
+ path_url=/Library/DeleteBook.php 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '22', 'Content-Type': 'application/json'} 
+ body=b'{"ID": "947303324534"}' 
+ </msg>
+<msg time="2025-01-03T14:33:23.875028" level="INFO">POST Response : url=https://rahulshettyacademy.com/Library/DeleteBook.php 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 03 Jan 2025 09:03:23 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With', 'Content-Length': '38', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'application/json;charset=UTF-8'} 
+ body={"msg":"book is successfully deleted"} 
+ </msg>
+<msg time="2025-01-03T14:33:23.875028" level="INFO">${delete_resp} = &lt;Response [200]&gt;</msg>
+<var>${delete_resp}</var>
+<arg>${base_url}/Library/DeleteBook.php</arg>
+<arg>json=${delete_req}</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a POST request.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.774409" elapsed="0.100619"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-03T14:33:23.875028" level="INFO">{'msg': 'book is successfully deleted'}</msg>
+<arg>${delete_resp.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.875028" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>book is successfully deleted</arg>
+<arg>${delete_resp.json()}[msg]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-01-03T14:33:23.875028" elapsed="0.000000"/>
+</kw>
+<tag>API</tag>
+<status status="PASS" start="2025-01-03T14:33:23.774409" elapsed="0.115636"/>
+</test>
+<status status="PASS" start="2025-01-03T14:33:23.407740" elapsed="0.483675"/>
+</suite>
+<status status="FAIL" start="2025-01-03T14:32:55.742269" elapsed="28.149146"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="12" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="4" fail="0" skip="0">API</stat>
+<stat pass="0" fail="1" skip="0">NEWFEATURE</stat>
+<stat pass="1" fail="1" skip="0">REGRESSION</stat>
+<stat pass="1" fail="1" skip="0">SMOKE</stat>
+</tag>
+<suite>
+<stat pass="7" fail="12" skip="0" id="s1" name="Tests.">Tests.</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="testDemo1">Tests..testDemo1</stat>
+<stat pass="0" fail="3" skip="0" id="s1-s2" name="testDemo2">Tests..testDemo2</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s3" name="testDemo3">Tests..testDemo3</stat>
+<stat pass="0" fail="3" skip="0" id="s1-s4" name="testDemo4">Tests..testDemo4</stat>
+<stat pass="0" fail="4" skip="0" id="s1-s5" name="testDemo5">Tests..testDemo5</stat>
+<stat pass="2" fail="1" skip="0" id="s1-s6" name="testDemo6">Tests..testDemo6</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s7" name="testDemo7">Tests..testDemo7</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-01-03T14:32:57.154684" level="WARN">The chromedriver version (130.0.6723.58) detected in PATH at C:\Python\Scripts\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.205); currently, chromedriver 131.0.6778.204 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-01-03T14:33:04.558283" level="WARN">The chromedriver version (130.0.6723.58) detected in PATH at C:\Python\Scripts\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.205); currently, chromedriver 131.0.6778.204 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-01-03T14:33:11.044094" level="WARN">The chromedriver version (130.0.6723.58) detected in PATH at C:\Python\Scripts\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.205); currently, chromedriver 131.0.6778.204 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-01-03T14:33:18.542802" level="WARN">The chromedriver version (130.0.6723.58) detected in PATH at C:\Python\Scripts\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.205); currently, chromedriver 131.0.6778.204 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

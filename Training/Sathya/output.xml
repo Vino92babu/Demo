@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.11.4 on win32)" generated="2024-12-31T16:36:52.007415" rpa="false" schemaversion="5">
+<suite id="s1" name="Demo" source="c:\VS_Code\Training\Sathya\Automation\Demo.robot">
+<test id="s1-t1" name="Detepicker" line="189">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-31T16:36:53.090275" level="INFO">Opening browser 'chrome' to base url 'https://demo.automationtesting.in/Datepicker.html'.</msg>
+<msg time="2024-12-31T16:36:54.030109" level="WARN">The chromedriver version (130.0.6723.58) detected in PATH at C:\Python\Scripts\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.205); currently, chromedriver 131.0.6778.204 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>https://demo.automationtesting.in/Datepicker.html</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-31T16:36:53.083397" elapsed="4.349570"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-31T16:36:57.441913" level="INFO">Clicking element '//img[@src="http://jqueryui.com/resources/demos/datepicker/images/calendar.gif"]'.</msg>
+<arg>//img[@src="http://jqueryui.com/resources/demos/datepicker/images/calendar.gif"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-31T16:36:57.437859" elapsed="0.231138"/>
+</kw>
+<status status="PASS" start="2024-12-31T16:36:53.081984" elapsed="4.590057"/>
+</test>
+<status status="PASS" start="2024-12-31T16:36:52.023942" elapsed="5.657975"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo">Demo</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-12-31T16:36:54.030109" level="WARN">The chromedriver version (130.0.6723.58) detected in PATH at C:\Python\Scripts\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.205); currently, chromedriver 131.0.6778.204 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

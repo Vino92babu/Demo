@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20231016 16:00:35.502" rpa="false" schemaversion="4">
+<suite id="s1" name="Fo" source="c:\VS_Code\MSM\Ikalnt_Mobile\fo.robot">
+<test id="s1-t1" name="Apt" line="4">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=13.0</arg>
+<arg>deviceName=MSM_Mobile</arg>
+<arg>app=C:\\Users\\Dell\\Downloads\\FO.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20231016 16:01:13.276" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20231016 16:01:13.274" endtime="20231016 16:01:34.755"/>
+</kw>
+<msg timestamp="20231016 16:01:34.762" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20231016 16:01:34.765" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'com.ionixx.msm' application. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting. Original error: 'com.ionixx.shikhar.MainAppUI' or 'com.ionixx.msm.com.ionixx.shikhar.MainAppUI' never started. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'com.ionixx.msm' application. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting. Original error: 'com.ionixx.shikhar.MainAppUI' or 'com.ionixx.msm.com.ionixx.shikhar.MainAppUI' never started. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting
+    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:384:37)</msg>
+<status status="FAIL" starttime="20231016 16:00:36.372" endtime="20231016 16:01:36.788"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231016 16:01:36.791" endtime="20231016 16:01:36.795"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id="android:id/content"</arg>
+<arg>ABC</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20231016 16:01:36.798" endtime="20231016 16:01:36.799"/>
+</kw>
+<status status="FAIL" starttime="20231016 16:00:36.368" endtime="20231016 16:01:36.806">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'com.ionixx.msm' application. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting. Original error: 'com.ionixx.shikhar.MainAppUI' or 'com.ionixx.msm.com.ionixx.shikhar.MainAppUI' never started. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'com.ionixx.msm' application. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting. Original error: 'com.ionixx.shikhar.MainAppUI' or 'com.ionixx.msm.com.ionixx.shikhar.MainAppUI' never started. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting
+    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:384:37)</status>
+</test>
+<status status="FAIL" starttime="20231016 16:00:35.519" endtime="20231016 16:01:36.817"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Fo">Fo</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231016 16:01:34.762" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>
